@@ -2,7 +2,7 @@ FROM alpine:3.22
 
 WORKDIR /usr/src
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x entrypoint.sh
+COPY entrypoint.sh /usr/src/entrypoint.sh
+RUN chmod +x /usr/src/entrypoint.sh
 
 ENTRYPOINT ["/usr/src/entrypoint.sh"]
