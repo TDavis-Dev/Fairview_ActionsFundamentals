@@ -16,11 +16,11 @@ jobs:
     steps:  
       - run: |
           echo "This job was triggered by the event: ${{ github.event_name }}"
-          echo "The current branch is ${{ github.ref }} of the repository ${{ github.event.repository.name }}"
+          echo "The current branch is ${{ github.ref }} of the repository ${{ github.repository }}"
       - uses: actions/checkout@v6.0.2
       
       - name: List all the files in the repo
-      - run: |
+        run: |
           echo "The github repository ${{ github.repository }}" contains the following files:"
           tree
           
