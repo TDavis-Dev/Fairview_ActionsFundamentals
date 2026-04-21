@@ -52,7 +52,7 @@ jobs:
     environment:
       name: PRD
       url: https://writeabout.net
-    if: github.event.inputs.environment == 'PRD'
+    if: github.event.inputs.environment == 'Production'
     steps:
       - run: |
           echo "🚀 Step 1..."
